@@ -11,12 +11,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
+public class Adapter_uczen extends RecyclerView.Adapter<Adapter_uczen.MyViewHolder> {
 
     Context context;
     ArrayList<Uczen_klasa>list;
 
-    public Adapter(Context context, ArrayList<Uczen_klasa> list) {
+
+
+    public Adapter_uczen(Context context, ArrayList<Uczen_klasa> list) {
         this.context = context;
         this.list = list;
     }
@@ -24,7 +26,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(context).inflate(R.layout.item,parent,false);
+        View v = LayoutInflater.from(context).inflate(R.layout.uczen_karta,parent,false);
         return new MyViewHolder(v);
     }
 
@@ -69,4 +71,5 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
             data_urodzenia= itemView.findViewById(R.id.data_urodzenia);
         }
     }
+
 }

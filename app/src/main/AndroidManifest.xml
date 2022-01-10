@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sekretariat_Mobile">
         <activity
+            android:name=".Pracownik"
+            android:exported="false" />
+        <activity
+            android:name=".Nauczyciel"
+            android:exported="false" />
+        <activity
+            android:name=".Uczen"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

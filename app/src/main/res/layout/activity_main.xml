@@ -4,14 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#4c4c4d"
     tools:context=".MainActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/userlist"
-        android:layout_width="409dp"
-        android:layout_height="729dp"
+
+    <Button
+        android:id="@+id/glowna_btn_pracownik"
+        android:layout_width="163dp"
+        android:layout_height="95dp"
+        android:text="Pracownik"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.685" />
+
+    <Button
+        android:id="@+id/glowna_btn_nauczyciel"
+        android:layout_width="163dp"
+        android:layout_height="95dp"
+        android:text="Naczucyiel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.481" />
+
+    <Button
+        android:id="@+id/glowna_btn_uczen"
+        android:layout_width="163dp"
+        android:layout_height="95dp"
+        android:text="Uczen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.284" />
 </androidx.constraintlayout.widget.ConstraintLayout>

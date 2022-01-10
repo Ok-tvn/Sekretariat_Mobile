@@ -5,7 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -17,38 +20,22 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    RecyclerView recyclerView;
-    DatabaseReference database;
-    Adapter Adapter;
-    ArrayList<Uczen_klasa> list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        recyclerView = findViewById(R.id.userlist);
-        database = FirebaseDatabase.getInstance().getReference("Uczniowie");
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        Button uczen_btn = (Button) findViewById(R.id.glowna_btn_uczen);
 
-        list = new ArrayList<>();
-        Adapter = new Adapter(this,list);
-        recyclerView.setAdapter(Adapter);
-
-        database.addValueEventListener(new ValueEventListener() {
+        uczen_btn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for(DataSnapshot dataSnapshot1: dataSnapshot.getChildren()){
-                    Uczen_klasa uczen = dataSnapshot1.getValue(Uczen_klasa.class);
-                    list.add(uczen);
-                }
-                Adapter.notifyDataSetChanged();
-            }
+            public void onClick(View v) {
+                Intent activityChangeIntent = new Intent(MainActivity.this, Uczen.class);
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
+                // currentContext.startActivity(activityChangeIntent);
 
+                MainActivity.this.startActivity(activityChangeIntent);
             }
         });
     }
