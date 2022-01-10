@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "817158171057",
+    "firebase_url": "https://zadanienaocene-6e871-default-rtdb.firebaseio.com",
+    "project_id": "zadanienaocene-6e871",
+    "storage_bucket": "zadanienaocene-6e871.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:817158171057:android:668a0528af6ba64fda3590",
+        "android_client_info": {
+          "package_name": "com.example.sekretariat_mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "817158171057-2gce3orq1gv1osh0cukob934b65uf95v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcFlbgcGb_SdsHABCRzqg4LFsDk71YSFQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "817158171057-2gce3orq1gv1osh0cukob934b65uf95v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
