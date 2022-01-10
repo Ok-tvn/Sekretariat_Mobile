@@ -5,7 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.Spinner;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -15,12 +21,14 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class Uczen extends AppCompatActivity {
+public class Uczen extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
     RecyclerView recyclerView;
     DatabaseReference database;
     Adapter_uczen Adapter_uczen;
     ArrayList<Uczen_klasa> list;
+    Spinner spinner_uczen;
+    String kategoria;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +43,13 @@ public class Uczen extends AppCompatActivity {
         list = new ArrayList<>();
         Adapter_uczen = new Adapter_uczen(this,list);
         recyclerView.setAdapter(Adapter_uczen);
+        Button przycisk_szukaj = (Button) findViewById(R.id.btn_szukaj_uczen);
+        spinner_uczen = findViewById(R.id.spinner_szukaj_uczen);
+
+        String[] spinner_uczen_kategorie = getResources().getStringArray(R.array.kategoria_uczen);
+        ArrayAdapter adapter = new ArrayAdapter(this,
+                android.R.layout.simple_spinner_dropdown_item, spinner_uczen_kategorie);
+        spinner_uczen.setAdapter(adapter);
 
         database.addValueEventListener(new ValueEventListener() {
             @Override
@@ -51,5 +66,46 @@ public class Uczen extends AppCompatActivity {
 
             }
         });
+        przycisk_szukaj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(kategoria=="data_urodzenia"){
+
+                } else if (kategoria == "drugie_imie") {
+
+                }else if(kategoria=="imie"){
+
+                } else if (kategoria == "imiona_rodzicow") {
+
+                }else if(kategoria == "klasa"){
+
+                }else if(kategoria=="nazwisko"){
+
+                }else if(kategoria=="nazwisko_panienskie"){
+
+                }else if(kategoria=="pesel"){
+
+                }else if(kategoria=="plec"){
+
+                }else if(kategoria=="zajecia_dodatkowe"){
+
+                }else if(kategoria=="zdjecie"){
+
+                }
+            }
+        });
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        if(parent.getId()==R.id.spinner_szukaj_uczen){
+            String valueFromSpinner = parent.getItemAtPosition(position).toString();
+            kategoria=valueFromSpinner;
+        }
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
     }
 }
