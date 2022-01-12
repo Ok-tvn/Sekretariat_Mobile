@@ -27,11 +27,33 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button uczen_btn = (Button) findViewById(R.id.glowna_btn_uczen);
+        Button pracownik_btn = (Button) findViewById(R.id.glowna_btn_pracownik);
+        Button nauczyciel_btn = (Button) findViewById(R.id.glowna_btn_nauczyciel);
 
         uczen_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent activityChangeIntent = new Intent(MainActivity.this, Uczen.class);
+
+                // currentContext.startActivity(activityChangeIntent);
+
+                MainActivity.this.startActivity(activityChangeIntent);
+            }
+        });
+        pracownik_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent activityChangeIntent = new Intent(MainActivity.this, Pracownik.class);
+
+                // currentContext.startActivity(activityChangeIntent);
+
+                MainActivity.this.startActivity(activityChangeIntent);
+            }
+        });
+        nauczyciel_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent activityChangeIntent = new Intent(MainActivity.this, Nauczyciel.class);
 
                 // currentContext.startActivity(activityChangeIntent);
 
