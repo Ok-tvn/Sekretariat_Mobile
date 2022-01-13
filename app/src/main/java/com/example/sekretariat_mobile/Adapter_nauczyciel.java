@@ -63,7 +63,7 @@ public class Adapter_nauczyciel extends RecyclerView.Adapter<Adapter_nauczyciel.
             imie= itemView.findViewById(R.id.imie);
             drugie_imie = itemView.findViewById(R.id.drugie_imie);
             imiona_rodzicow= itemView.findViewById(R.id.imie_rodzice);
-            klasy = itemView.findViewById(R.id.klasy);
+            klasy = itemView.findViewById(R.id.etat);
             nazwisko= itemView.findViewById(R.id.nazwisko);
             nazwisko_panienskie = itemView.findViewById(R.id.pan_nazwisko);
             pesel= itemView.findViewById(R.id.pesel);
@@ -72,7 +72,7 @@ public class Adapter_nauczyciel extends RecyclerView.Adapter<Adapter_nauczyciel.
             wychowastwo = itemView.findViewById(R.id.wychowastwo);
             zdjecie = itemView.findViewById(R.id.zdjecie);
             data_urodzenia= itemView.findViewById(R.id.data_urodzenia);
-            data_zatrudnienia = itemView.findViewById(R.id.data_zatrudnienia);
+            data_zatrudnienia = itemView.findViewById(R.id.opis_stanowiska);
         }
     }
 }

@@ -61,12 +61,12 @@ public class Adapter_uczen extends RecyclerView.Adapter<Adapter_uczen.MyViewHold
             imie= itemView.findViewById(R.id.imie);
             drugie_imie = itemView.findViewById(R.id.drugie_imie);
             imiona_rodzicow= itemView.findViewById(R.id.imie_rodzice);
-            klasa = itemView.findViewById(R.id.klasy);
+            klasa = itemView.findViewById(R.id.etat);
             nazwisko= itemView.findViewById(R.id.nazwisko);
             nazwisko_panienskie = itemView.findViewById(R.id.pan_nazwisko);
             pesel= itemView.findViewById(R.id.pesel);
             plec = itemView.findViewById(R.id.plec);
-            zajecia_dodatkowe= itemView.findViewById(R.id.data_zatrudnienia);
+            zajecia_dodatkowe= itemView.findViewById(R.id.opis_stanowiska);
             zdjecie = itemView.findViewById(R.id.zdjecie);
             data_urodzenia= itemView.findViewById(R.id.data_urodzenia);
         }

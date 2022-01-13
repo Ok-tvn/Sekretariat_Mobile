@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="kategoria_pracownik">
+        <item>data_urodzenia</item>
+        <item>data_zatrudnienia</item>
+        <item>imie</item>
+        <item>drugie_imie</item>
+        <item>imiona_rodzicow</item>
+        <item>etat</item>
+        <item>nazwisko</item>
+        <item>nazwisko_panienskie</item>
+        <item>pesel</item>
+        <item>plec</item>
+        <item>opis_stanowiska</item>
+        <item>zdjecie</item>
+    </string-array>
+</resources>
