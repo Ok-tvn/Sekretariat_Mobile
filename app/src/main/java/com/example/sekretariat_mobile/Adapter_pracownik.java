@@ -13,6 +13,7 @@ import java.util.ArrayList;
 
 public class Adapter_pracownik extends RecyclerView.Adapter<Adapter_pracownik.MyViewHolder>{
 
+
     Context context;
     ArrayList<Pracownik_klasa> list;
 

@@ -4,7 +4,6 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -13,27 +12,29 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class Adapter_uczen extends RecyclerView.Adapter<Adapter_uczen.MyViewHolder>{
+public class Adapter_uczen_szukaj extends RecyclerView.Adapter<Adapter_uczen.MyViewHolder> {
 
     Context context;
-    ArrayList<Uczen_klasa>list;
+    ArrayList<Uczen_klasa> list;
+    Spinner spinner_uczen;
+    String text = spinner_uczen.getSelectedItem().toString();
 
-
-
-    public Adapter_uczen(Context context, ArrayList<Uczen_klasa> list) {
+    public Adapter_uczen_szukaj(Context context, ArrayList<Uczen_klasa> list) {
         this.context = context;
         this.list = list;
     }
 
     @NonNull
     @Override
-    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public Adapter_uczen.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(context).inflate(R.layout.uczen_karta,parent,false);
-        return new MyViewHolder(v);
+        return new Adapter_uczen.MyViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull Adapter_uczen.MyViewHolder holder, int position) {
+
+
         Uczen_klasa uczen = list.get(position);
         holder.imie.setText(uczen.getImie());
         holder.drugie_imie.setText(uczen.getDrugie_imie());
@@ -54,7 +55,6 @@ public class Adapter_uczen extends RecyclerView.Adapter<Adapter_uczen.MyViewHold
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
-
         TextView imie,drugie_imie,imiona_rodzicow,klasa,nazwisko,nazwisko_panienskie,pesel,plec,zajecia_dodatkowe,zdjecie,data_urodzenia;
 
         public MyViewHolder(@NonNull View itemView) {
@@ -73,5 +73,4 @@ public class Adapter_uczen extends RecyclerView.Adapter<Adapter_uczen.MyViewHold
             data_urodzenia= itemView.findViewById(R.id.data_urodzenia);
         }
     }
-
 }
